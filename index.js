@@ -1,7 +1,6 @@
-#!/usr/bin/env nodejs
-var http = require('http')
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'})
-  res.end('Yello World\n')
-}).listen(8080, 'localhost')
-console.log('Server running at http://localhost:8080/')
+const express = require('express')
+const app = express()
+
+app.get('/', (req, res) => res.send('Hello World!'))
+
+app.listen(8080, () => console.log('Example app listening on port 3000!'))
