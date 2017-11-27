@@ -3,8 +3,8 @@ const app = express()
 
 const port = 8080
 
-app.use('/', express.static('public'))
+app.use('/static', express.static('public'))
 
-app.get('/', (req, res) => res.send('Welcome to BBG.'))
+app.get('/', (req, res) => res.send('index.html'))
 
 app.listen(port, () => console.log(`This app is running on port ${port}`))
