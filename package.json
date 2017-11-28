@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint **/*.js --ignore-pattern node_modules/"
+    "lint": "eslint **/*.js --ignore-pattern node_modules/",
+    "build-sass": "node-sass ./src/sass/main.sass ./public/styles.css"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,8 @@
     "vis": "^4.21.0"
   },
   "devDependencies": {
-    "eslint": "^4.10.0"
+    "eslint": "^4.10.0",
+    "node-sass": "^4.7.2",
+    "sass-lint": "^1.12.1"
   }
 }
