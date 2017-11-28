@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint **/*.js --ignore-pattern node_modules/",
-    "build-sass": "node-sass ./src/sass/main.sass ./public/styles.css"
+    "watch-sass": "node-sass --watch ./src/sass/main.sass ./public/styles.css"
   },
   "author": "",
   "license": "ISC",
