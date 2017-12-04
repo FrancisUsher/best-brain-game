@@ -16,7 +16,7 @@ const verifySignature = (payloadBody, compareSig) => {
 }
 
 const buildEnvironmentHMAC = () => {
-  return crypto.createHmac('sha1, process.env.SECRET_TOKEN)
+  return crypto.createHmac('sha1', process.env.SECRET_TOKEN)
 }
 
 app.use('/public/', express.static('public'))
