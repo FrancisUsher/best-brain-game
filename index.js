@@ -19,7 +19,7 @@ const buildEnvironmentHMAC = () => {
   return crypto.createHmac('sha1, process.env.SECRET_TOKEN)
 }
 
-app.use('/', express.static('public'))
+app.use('/public/', express.static('public'))
 
 app.post('/api/webhook-site-update', (req, res) => {
   let payloadBody = req.body
