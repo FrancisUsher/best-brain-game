@@ -17,6 +17,7 @@
     "vis": "^4.21.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "eslint": "^4.10.0",
     "node-sass": "^4.7.2",
     "sass-lint": "^1.12.1"
