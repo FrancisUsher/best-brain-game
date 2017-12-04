@@ -22,7 +22,7 @@ var port = 8080;
 
 app.post('/api/webhook-site-update', function (req, res) {
   var payloadBody = req.body;
-  var compareSig = req.header('HTTP_X_HUB_SIGNATURE');
+  var compareSig = req.header('X-Hub-Signature');
   if ((0, _githubWebhook.verifySignature)(JSON.stringify(payloadBody), compareSig)) {
     res.send(200, 'Thanks for the info Github!');
     (0, _child_process.execSync)('git pull');
