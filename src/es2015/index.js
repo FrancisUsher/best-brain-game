@@ -15,7 +15,7 @@ const port = 8080
 app.post('/api/webhook-site-update', (req, res) => {
   let payloadBody = req.body
   let compareSig = req.header('HTTP_X_HUB_SIGNATURE')
-  if(verifySignature(payloadBody, compareSig)){
+  if(verifySignature(JSON.stringify(payloadBody), compareSig)){
     res.send(200, 'Thanks for the info Github!')
     execSync('git pull')
     execSync('pm2 restart index.js')
