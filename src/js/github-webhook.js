@@ -1,12 +1,12 @@
 const crypto = require('crypto')
 
-const verifySignature = (payloadBody, compareSig) => {
+function verifySignature(payloadBody, compareSig){
   let hmac = buildEnvironmentHMAC().update(payloadBody)
   let signature = 'sha1=' + hmac.digest('hex')
   return crypto.timingSafeEqual(signature, compareSig)
 }
 
-const buildEnvironmentHMAC = () => {
+function buildEnvironmentHMAC(){
   return crypto.createHmac('sha1', process.env.SECRET_TOKEN)
 }
 

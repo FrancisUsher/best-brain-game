@@ -3,23 +3,32 @@
   "version": "1.0.0",
   "description": "Fully synced with git",
   "main": "index.js",
+  "types": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint **/*.js --ignore-pattern node_modules/",
-    "watch-sass": "node-sass --watch ./src/sass/main.sass ./public/styles.css"
+    "watch-sass": "node-sass --watch ./src/sass/main.sass ./public/styles.css",
+    "watch-babel": "babel src/es2015 --watch --out-dir lib/js",
+    "build": "babel src/es2015 --out-dir ./",
+    "flow": "flow"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "redis": "^2.8.0",
-    "typescript": "^2.6.2",
     "vis": "^4.21.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
     "eslint": "^4.10.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "flow-bin": "^0.60.1",
     "node-sass": "^4.7.2",
     "sass-lint": "^1.12.1"
   }
