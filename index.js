@@ -1,25 +1,14 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const crypto = require('crypto')
+
 const { execSync } = require('child_process')
+const { verifySignature } = require('./src/js/github-webhook.js')
 
 const app = express()
 
 app.use(bodyParser.json())
 
 const port = 8080
-
-const verifySignature = (payloadBody, compareSig) => {
-  let hmac = buildEnvironmentHMAC().update(payloadBody)
-  let signature = 'sha1=' + hmac.digest('hex')
-  return crypto.timingSafeEqual(signature, compareSig)
-}
-
-const buildEnvironmentHMAC = () => {
-  return crypto.createHmac('sha1', process.env.SECRET_TOKEN)
-}
-
-app.use('/public/', express.static('public'))
 
 app.post('/api/webhook-site-update', (req, res) => {
   let payloadBody = req.body
@@ -32,6 +21,8 @@ app.post('/api/webhook-site-update', (req, res) => {
     res.send(401, 'Invalid signature. Are you really Github?')
   }
 })
+
+app.use('/public/', express.static('public'))
 
 app.listen(port, () => console.log(`This app is running on port ${port}`))
 
