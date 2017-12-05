@@ -18,6 +18,8 @@ var app = (0, _express2.default)();
 
 app.use(_bodyParser2.default.json());
 
+app.use(_express2.default.static('public'));
+
 var port = 8080;
 
 app.post('/api/webhook-site-update', function (req, res) {
@@ -31,8 +33,6 @@ app.post('/api/webhook-site-update', function (req, res) {
     res.send(401, 'Invalid signature. Are you really Github?');
   }
 });
-
-app.use('/public/', _express2.default.static('public'));
 
 app.listen(port, function () {
   return console.log('This app is running on port ' + port);

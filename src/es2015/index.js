@@ -10,7 +10,7 @@ const app = express()
 
 app.use(bodyParser.json())
 
-app.use('/', express.static('public'))
+app.use(express.static('public'))
 
 const port = 8080
 
