@@ -24,6 +24,6 @@ app.post('/api/webhook-site-update', (req, res) => {
   }
 })
 
-app.use('/public/', express.static('public'))
+app.use('/', express.static('public'))
 
 app.listen(port, () => console.log(`This app is running on port ${port}`))
