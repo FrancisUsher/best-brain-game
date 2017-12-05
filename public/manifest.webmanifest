@@ -4,6 +4,7 @@
   "start_url": ".",
   "display": "standalone",
   "background_color": "#ccf",
+  "theme_color": "#66f",
   "description": "Visualize thoughts fluidly. A framework for thinking.",
   "icons": [{
     "src": "icons/icon-72x72.png",
