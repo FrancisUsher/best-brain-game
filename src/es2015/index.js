@@ -10,6 +10,8 @@ const app = express()
 
 app.use(bodyParser.json())
 
+app.use('/', express.static('public'))
+
 const port = 8080
 
 app.post('/api/webhook-site-update', (req, res) => {
@@ -23,7 +25,5 @@ app.post('/api/webhook-site-update', (req, res) => {
     res.send(401, 'Invalid signature. Are you really Github?')
   }
 })
-
-app.use('/', express.static('public'))
 
 app.listen(port, () => console.log(`This app is running on port ${port}`))
