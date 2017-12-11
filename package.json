@@ -17,6 +17,7 @@
   "dependencies": {
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "body-parser": "^1.18.2",
+    "compromise": "^11.2.1",
     "express": "^4.16.2",
     "redis": "^2.8.0",
     "vis": "^4.21.0"
