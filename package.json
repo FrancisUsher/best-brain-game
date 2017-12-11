@@ -26,8 +26,8 @@
     "babel-eslint": "^8.0.3",
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
-    "eslint": "^4.10.0",
-    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint": "^4.13.0",
+    "eslint-plugin-flowtype": "^2.40.0",
     "flow-bin": "^0.60.1",
     "node-sass": "^4.7.2",
     "sass-lint": "^1.12.1"
