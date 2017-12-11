@@ -8,7 +8,7 @@ Pushing to this repo should automatically trigger a webhook which will update th
 # Really great Lighthouse score
 * Progressive Web App `100`
 * Performance `99`
-* Accessibility `97`
-* Best Practices `92`
+* Accessibility `100`
+* Best Practices `92` (no H/2 push yet because it's too hard)
 
-[Click here to see the latest report](https://googlechrome.github.io/lighthouse/viewer/?gist=7972fbd1a47ae3f45ce7e6321819ee48)
+[Click here to see the latest report](https://googlechrome.github.io/lighthouse/viewer/?gist=9f8deec5a903cb9def2a9b6c3f0e60c2)
