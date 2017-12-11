@@ -10,7 +10,13 @@ var _bodyParser2 = _interopRequireDefault(_bodyParser);
 
 var _child_process = require('child_process');
 
+var _compromise = require('compromise');
+
+var nlp = _interopRequireWildcard(_compromise);
+
 var _githubWebhook = require('./lib/github-webhook.js');
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32,6 +38,12 @@ app.post('/api/webhook-site-update', function (req, res) {
   } else {
     res.send(401, 'Invalid signature. Are you really Github?');
   }
+});
+
+app.get('/api/natural-language/part-of-speech', function (req, res) {
+
+  var sentence = req.query.sentence;
+  res.send(nlp(sentence));
 });
 
 app.listen(port, function () {

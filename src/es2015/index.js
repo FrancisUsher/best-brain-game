@@ -4,6 +4,8 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import { execSync } from 'child_process'
 
+import * as nlp from 'compromise'
+
 import { verifySignature } from './lib/github-webhook.js'
 
 const app = express()
@@ -24,6 +26,12 @@ app.post('/api/webhook-site-update', (req, res) => {
   } else {
     res.send(401, 'Invalid signature. Are you really Github?')
   }
+})
+
+app.get('/api/natural-language/part-of-speech', (req, res) => {
+
+  let sentence = req.query.sentence
+  res.send(nlp(sentence))
 })
 
 app.listen(port, () => console.log(`This app is running on port ${port}`))
