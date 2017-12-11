@@ -16,12 +16,16 @@ app.use(express.static('public'))
 
 const port = 8080
 
+app.set('view engine', 'pug')
+
 app.post('/api/webhook-site-update', (req, res) => {
   let payloadBody = req.body
   let compareSig = req.header('X-Hub-Signature')
   if(verifySignature(JSON.stringify(payloadBody), compareSig)){
     res.send(200, 'Thanks for the info Github!')
     execSync('git pull')
+    execSync('npm update')
+    execSync('pm2 flush')
     execSync('pm2 restart index.js')
   } else {
     res.send(401, 'Invalid signature. Are you really Github?')

@@ -7,8 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/es2015/**/*.js",
-    "watch-sass": "node-sass --watch ./src/sass/main.sass ./public/styles.css",
+    "watch-sass": "node-sass --watch ./src/sass/main.sass ./src/css/styles.css",
     "watch-babel": "babel src/es2015 --watch --out-dir ./",
+    "build-pug": "pug ./src/pug/index.pug --out ./public/",
     "build": "babel src/es2015 --out-dir ./",
     "flow": "flow"
   },
@@ -19,6 +20,9 @@
     "body-parser": "^1.18.2",
     "compromise": "^11.2.1",
     "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4",
+    "pug-cli": "^1.0.0-alpha6",
+    "pug-lint": "^2.5.0",
     "redis": "^2.8.0",
     "vis": "^4.21.0"
   },

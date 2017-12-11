@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title BBG
+    link(rel="icon" href="/icons/icon-72x72.png")
+    include android-manifest.pug
+    include ios-manifest.pug
+    style
+      include ../css/styles.css
+    script
+      include ../js/install-serviceworker.js
+    
+  body
+      a(href="https://github.com/FrancisUsher/best-brain-game") This site on Github
+

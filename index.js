@@ -28,12 +28,16 @@ app.use(_express2.default.static('public'));
 
 var port = 8080;
 
+app.set('view engine', 'pug');
+
 app.post('/api/webhook-site-update', function (req, res) {
   var payloadBody = req.body;
   var compareSig = req.header('X-Hub-Signature');
   if ((0, _githubWebhook.verifySignature)(JSON.stringify(payloadBody), compareSig)) {
     res.send(200, 'Thanks for the info Github!');
     (0, _child_process.execSync)('git pull');
+    (0, _child_process.execSync)('npm update');
+    (0, _child_process.execSync)('pm2 flush');
     (0, _child_process.execSync)('pm2 restart index.js');
   } else {
     res.send(401, 'Invalid signature. Are you really Github?');
