@@ -1,10 +1,39 @@
-<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>BBG</title><link rel="icon" href="/icons/icon-72x72.png"><meta name="theme-color" content="#66f"><link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icons/icon-128x128.png"><link rel="apple-touch-icon" sizes="#{resolution}x#{resolution}" href="/icons/icon-#{resolution}x#{resolution}.png"><link rel="apple-touch-icon" sizes="#{resolution}x#{resolution}" href="/icons/icon-#{resolution}x#{resolution}.png"><link rel="apple-touch-icon" sizes="#{resolution}x#{resolution}" href="/icons/icon-#{resolution}x#{resolution}.png"><link rel="apple-touch-icon" sizes="#{resolution}x#{resolution}" href="/icons/icon-#{resolution}x#{resolution}.png"><link rel="apple-touch-icon" sizes="#{resolution}x#{resolution}" href="/icons/icon-#{resolution}x#{resolution}.png"><link rel="apple-touch-icon" sizes="#{resolution}x#{resolution}" href="/icons/icon-#{resolution}x#{resolution}.png"><link rel="apple-touch-icon" sizes="#{resolution}x#{resolution}" href="/icons/icon-#{resolution}x#{resolution}.png"><link rel="apple-touch-startup-image" href="/icons/icon-512x512.png"><meta name="apple-mobile-web-app-title" content="BestBrainGame"><!-- disable some browser UI fields like URL bar on IOS--><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#66f"><style>body {
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>BBG</title><link rel="icon" href="/icons/icon-72x72.png"><meta name="theme-color" content="#66f"><link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icons/icon-128x128.png"><link rel="apple-touch-icon" sizes="#{resolution}x#{resolution}" href="/icons/icon-#{resolution}x#{resolution}.png"><link rel="apple-touch-icon" sizes="#{resolution}x#{resolution}" href="/icons/icon-#{resolution}x#{resolution}.png"><link rel="apple-touch-icon" sizes="#{resolution}x#{resolution}" href="/icons/icon-#{resolution}x#{resolution}.png"><link rel="apple-touch-icon" sizes="#{resolution}x#{resolution}" href="/icons/icon-#{resolution}x#{resolution}.png"><link rel="apple-touch-icon" sizes="#{resolution}x#{resolution}" href="/icons/icon-#{resolution}x#{resolution}.png"><link rel="apple-touch-icon" sizes="#{resolution}x#{resolution}" href="/icons/icon-#{resolution}x#{resolution}.png"><link rel="apple-touch-icon" sizes="#{resolution}x#{resolution}" href="/icons/icon-#{resolution}x#{resolution}.png"><link rel="apple-touch-startup-image" href="/icons/icon-512x512.png"><meta name="apple-mobile-web-app-title" content="BestBrainGame"><!-- disable some browser UI fields like URL bar on IOS--><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#66f"><style>*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+body {
   background-color: #ccf;
-  color: #000; }
+  color: #000;
+  margin: 40px; }
   body a {
     color: #000; }
+
+h1,
+p {
+  margin: 0 0 1em; }
+
+.app-shell {
+  display: grid;
+  grid-gap: 10px;
+  margin: 0 20px;
+  max-width: 940px; }
+  .app-shell > * {
+    background-color: #eee;
+    border-radius: 5px;
+    color: #000;
+    font-size: 150%;
+    padding: 20px; }
+
+@media screen and (min-width: 500px) {
+  .app-shell {
+    grid-template-columns: 1fr 3fr; }
+  .header,
+  .footer {
+    grid-column: 1 / -1; } }
 </style><script>if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/service-worker.js')
   })
-}</script></head><body><a href="https://github.com/FrancisUsher/best-brain-game">This site on Github</a></body></html>
+}</script></head><body><div class="app-shell"><header class="header">BBG</header><aside class="sidebar">Glorious nav options</aside><article class="content">This is some quality content.</article><footer class="footer"><a href="https://github.com/FrancisUsher/best-brain-game">This site on Github</a></footer></div></body></html>

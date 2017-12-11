@@ -9,6 +9,7 @@
     "lint": "eslint src/es2015/**/*.js",
     "watch-sass": "node-sass --watch ./src/sass/main.sass ./src/css/styles.css",
     "watch-babel": "babel src/es2015 --watch --out-dir ./",
+    "watch-pug": "pug ./src/pug/index.pug --out ./public/ --watch",
     "build-pug": "pug ./src/pug/index.pug --out ./public/",
     "build": "babel src/es2015 --out-dir ./",
     "flow": "flow"
