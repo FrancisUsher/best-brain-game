@@ -6,7 +6,7 @@
   "types": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint **/*.js --ignore-pattern node_modules/",
+    "lint": "eslint src/es2015/**/*.js",
     "watch-sass": "node-sass --watch ./src/sass/main.sass ./public/styles.css",
     "watch-babel": "babel src/es2015 --watch --out-dir ./",
     "build": "babel src/es2015 --out-dir ./",
