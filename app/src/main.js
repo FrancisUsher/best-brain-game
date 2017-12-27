@@ -2,11 +2,13 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import 'vue-material/dist/vue-material.min.css';
-import 'vue-material/dist/theme/default-dark.css';
+// Uncomment to enable the dark material theme
+// import 'vue-material/dist/theme/default-dark.css';
 import { MdBottomBar, MdTabs, MdIcon, MdButton, MdApp, MdContent, MdToolbar } from 'vue-material/dist/components';
 import App from './App';
 import router from './router';
 import BarRouter from './components/BarRouter';
+import './assets/material-icons.css';
 
 Vue.use(MdButton);
 Vue.use(MdBottomBar);
