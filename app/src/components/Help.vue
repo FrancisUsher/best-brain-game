@@ -1,5 +1,5 @@
 <template lang="pug">
-  .resume
+  .help
     h2 This site on Github:
     a(href="https://github.com/FrancisUsher/best-brain-game") https://github.com/FrancisUsher/best-brain-game
     
@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'resume',
+  name: 'help',
 };
 </script>
 
