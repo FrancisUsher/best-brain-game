@@ -2,7 +2,10 @@
   .home
     h1 Hello
     h2 What are you thinking about?
-    
+    md-field
+      label Type here!
+      md-textarea(v-model="textarea")
+      span(class="md-helper-text") Helper text
 </template>
 
 <script>
