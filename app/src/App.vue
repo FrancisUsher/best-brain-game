@@ -3,7 +3,7 @@
     md-app(md-mode="reveal")
       md-app-toolbar
         img(src="/static/img/icons/apple-touch-icon-60x60.png" alt="A smiley icon with exaggeratedly low upside-down U eyes.")
-        span.md-title Francis Usher
+        span.md-title It's nice to see you.
       md-app-content
         router-view
     bar-router.bottom-nav
