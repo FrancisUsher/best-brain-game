@@ -4,7 +4,7 @@ import Vue from 'vue';
 import 'vue-material/dist/vue-material.min.css';
 // Uncomment to enable the dark material theme
 // import 'vue-material/dist/theme/default-dark.css';
-import { MdBottomBar, MdTabs, MdIcon, MdButton, MdApp, MdContent, MdToolbar, MdField } from 'vue-material/dist/components';
+import { MdBottomBar, MdTabs, MdIcon, MdButton, MdApp, MdContent, MdToolbar, MdField, MdList, MdAvatar, MdDivider } from 'vue-material/dist/components';
 import App from './App';
 import router from './router';
 import BarRouter from './components/BarRouter';
@@ -19,6 +19,9 @@ Vue.use(MdApp);
 Vue.use(MdContent);
 Vue.use(MdToolbar);
 Vue.use(MdField);
+Vue.use(MdList);
+Vue.use(MdAvatar);
+Vue.use(MdDivider);
 
 Vue.config.productionTip = false;
 

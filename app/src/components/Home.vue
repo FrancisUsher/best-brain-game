@@ -5,7 +5,32 @@
       md-field
         label Type here!
         md-textarea(v-model="textarea")
-        span(class="md-helper-text") Don't be afraid! Let your heart spill.
+        span.md-helper-text Don't be afraid! Let your heart spill.
+      md-list.md-triple-line
+        md-list-item
+          md-avatar
+            img(src="https://placeimg.com/40/40/people/1" alt="People")
+          
+          .md-list-item-text
+            span Ali Connors
+            span Brunch this weekend?
+            p I'll be in your neighborhood doing errands this week. Do you want to meet?
+
+          md-button.md-icon-button.md-list-action
+            md-icon.md-primary star
+        md-divider.md-inset
+        md-list-item
+          md-avatar
+            img(src="https://placeimg.com/40/40/people/1" alt="People")
+          
+          .md-list-item-text
+            span Ali Connors
+            span Brunch this weekend?
+            p I'll be in your neighborhood doing errands this week. Do you want to meet?
+
+          md-button.md-icon-button.md-list-action
+            md-icon.md-primary star
+
 </template>
 
 <script>
