@@ -1,11 +1,11 @@
 <template lang="pug">
   .home
-    h1 Hello
-    h2 What are you thinking about?
-    md-field
-      label Type here!
-      md-textarea(v-model="textarea")
-      span(class="md-helper-text") Helper text
+    md-content
+      h2 What are you thinking about?
+      md-field
+        label Type here!
+        md-textarea(v-model="textarea")
+        span(class="md-helper-text") Don't be afraid! Let your heart spill.
 </template>
 
 <script>
@@ -16,8 +16,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
-  h1
-    :font-weight normal
   h2
     :font-weight normal
 
