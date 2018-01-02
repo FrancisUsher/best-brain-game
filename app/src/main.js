@@ -4,10 +4,11 @@ import Vue from 'vue';
 import 'vue-material/dist/vue-material.min.css';
 // Uncomment to enable the dark material theme
 // import 'vue-material/dist/theme/default-dark.css';
-import { MdBottomBar, MdTabs, MdIcon, MdButton, MdApp, MdContent, MdToolbar, MdField, MdList, MdAvatar, MdDivider } from 'vue-material/dist/components';
+import { MdCard, MdBottomBar, MdTabs, MdIcon, MdButton, MdApp, MdContent, MdToolbar, MdField, MdList, MdAvatar, MdDivider } from 'vue-material/dist/components';
 import App from './App';
 import router from './router';
 import BarRouter from './components/BarRouter';
+import MessageListItem from './components/MessageListItem';
 import './assets/material-icons.css';
 
 Vue.use(MdButton);
@@ -22,9 +23,11 @@ Vue.use(MdField);
 Vue.use(MdList);
 Vue.use(MdAvatar);
 Vue.use(MdDivider);
+Vue.use(MdCard);
 
 Vue.config.productionTip = false;
 
+Vue.component('messageListItem', MessageListItem);
 Vue.component('barRouter', BarRouter);
 
 /* eslint-disable no-new */
