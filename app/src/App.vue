@@ -18,7 +18,8 @@ export default {
 
 <style lang="sass">
   @import ~vue-material/dist/theme/engine
-  +md-register-theme("default", (primary: md-get-palette-color(cyan, 200), accent: md-get-palette-color(deeppurple, A100), theme: dark ))
+  +md-register-theme("default", (primary: md-get-palette-color(grey, 900), accent: md-get-palette-color(grey, 900), theme: light ))
+  +md-register-theme("vaporwave", (primary: md-get-palette-color(pink, 500), accent: md-get-palette-color(teal, A200), theme: dark ))
   @import ~vue-material/dist/theme/all
   .bottom-nav
     :position fixed
