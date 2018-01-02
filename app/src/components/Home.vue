@@ -6,26 +6,18 @@
           .md-title What are you thinking about?
           .md-subhead Let's think it through together.
         md-card-content
+          md-field(md-inline)
+            label Short summary
+            md-input(v-model="inline")
           md-field
             label Type here.
             md-textarea(v-model="textarea")
             span.md-helper-text Don't be afraid! Let your heart spill.
         md-card-actions
-          md-button Action 1
+          md-button(v-on:click="addMessageListItem") Action 1
           md-button Action 2
       md-list.md-triple-line
-        message-list-item(top="asdf" middle="lololol")
-        md-list-item
-          md-avatar
-            img(src="/static/img/icons/apple-touch-icon-60x60.png" alt="People")
-          
-          .md-list-item-text
-            span Normal
-            span Brunch this weekend?
-            p I'll be in your neighborhood doing errands this week. Do you want to meet for brunch?
-
-          md-button.md-icon-button.md-list-action
-            md-icon.md-primary star
+        message-list-item(v-for="(item, index) in items" :key="item.top" :top="item.top" :middle="item.middle" :bottom="item.bottom")
         md-divider.md-inset
 </template>
 
@@ -34,11 +26,24 @@ export default {
   name: 'home',
   data: () => ({
     textarea: null,
+    inline: null,
     items: [
-      { message: 'Foo' },
-      { message: 'Bar' },
+      {
+        top: 'top',
+        middle: 'middle',
+        bottom: 'Bottom',
+      },
     ],
   }),
+  methods: {
+    addMessageListItem() {
+      this.items.unshift({
+        top: this.inline,
+        middle: this.textarea,
+        bottom: 'Bottom',
+      });
+    },
+  },
 };
 </script>
 

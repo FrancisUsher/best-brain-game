@@ -15,11 +15,6 @@
 <script>
 export default {
   name: 'message-list-item',
-  data: () => ({
-    top: null,
-    middle: null,
-    bottom: null,
-  }),
   props: ['top', 'middle', 'bottom'],
 };
 </script>
