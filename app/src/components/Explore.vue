@@ -7,7 +7,7 @@
 <script>
 export default {
   name: 'explore',
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

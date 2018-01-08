@@ -8,7 +8,7 @@
 <script>
   export default {
     name: 'bar-router',
-  };
+  }
 </script>
 
 <style lang="sass" scoped>

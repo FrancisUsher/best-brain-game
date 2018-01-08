@@ -13,7 +13,7 @@
 <script>
 export default {
   name: 'app',
-};
+}
 </script>
 
 <style lang="sass">

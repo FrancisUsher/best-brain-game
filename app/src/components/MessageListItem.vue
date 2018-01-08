@@ -16,7 +16,7 @@
 export default {
   name: 'message-list-item',
   props: ['top', 'middle', 'bottom'],
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
